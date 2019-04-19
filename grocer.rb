@@ -65,5 +65,8 @@ def checkout(cart, coupons)
 
     end
   end
+  if value > 100 
+    value = value*0.9
+  end
   return value
 end
