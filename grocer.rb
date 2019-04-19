@@ -54,9 +54,9 @@ def checkout(cart, coupons)
   hash.each do |item, stuff|
     stuff.each do |thing, amount|
       i = false
-        if thing == :clearance
-          
-        end
+      if thing == :clearance && amount == true
+        i = true
+      end
         
     end
   end
