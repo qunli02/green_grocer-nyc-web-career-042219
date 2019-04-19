@@ -54,6 +54,7 @@ def checkout(cart, coupons)
   hash.each do |item, stuff|
     stuff.each do |thing, amount|
       if 
+        
     end
   end
 end
