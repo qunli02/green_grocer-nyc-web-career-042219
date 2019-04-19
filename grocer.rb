@@ -60,7 +60,7 @@ def checkout(cart, coupons)
         count = amount
       end
       if thing == :price
-        value += (count * stuff)
+        value += (count * amount)
       end
     end
   end
