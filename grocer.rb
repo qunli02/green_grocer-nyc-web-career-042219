@@ -50,5 +50,8 @@ end
 def checkout(cart, coupons)
   # code here
   new_cart = consolidate_cart(cart)
-  print apply_coupons(new_cart, coupons)
+  hash = apply_coupons(new_cart, coupons)
+  hash.each do |item, stuff|
+    
+  end
 end
