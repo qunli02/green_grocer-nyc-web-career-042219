@@ -59,12 +59,18 @@ def checkout(cart, coupons)
       elsif thing == :clearance && amount == false
         i = false
       end
-      if i == true && item == :price
-        hash[item][] = amount*0.8
+      if i == true && thing == :price
+        hash[item][thing] = amount*0.8
       end
     end
   end
-  hash.each do |item |
-    
+  value = 0.00
+  hash.each do |item, stuff|
+    stuff.each do |thing, amount|
+      if thing == :price
+        value += amount
+      end
+    end
   end
+  return value
 end
