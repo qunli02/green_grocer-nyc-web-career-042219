@@ -49,5 +49,5 @@ end
 
 def checkout(cart, coupons)
   # code here
-  
+  print 
 end
