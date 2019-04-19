@@ -56,11 +56,11 @@ def checkout(cart, coupons)
   count = 0
   hash.each do |item, stuff|
     stuff.each do |thing, amount|
-      if thing == :count
-        count = amount
-      end
       if thing == :price
         value += (count * amount)
+      end
+      if thing == :count
+        count = amount
       end
     end
   end
