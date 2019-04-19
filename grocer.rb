@@ -52,12 +52,16 @@ def checkout(cart, coupons)
   new_cart = consolidate_cart(cart)
   hash = apply_coupons(new_cart, coupons)
   hash.each do |item, stuff|
+    i = false
     stuff.each do |thing, amount|
-      i = false
       if thing == :clearance && amount == true
         i = true
+      elsif thing == :clearance && amount == false
+        i = false
       end
+      if i == true && 
         
+      end
     end
   end
 end
