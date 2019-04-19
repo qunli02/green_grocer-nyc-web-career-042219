@@ -49,6 +49,6 @@ end
 
 def checkout(cart, coupons)
   # code here
-  print cart
-  puts coupons
+  print cart.class
+  puts coupons.class
 end
