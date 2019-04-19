@@ -51,12 +51,16 @@ def checkout(cart, coupons)
   # code here
   new_cart = consolidate_cart(cart)
   hash = apply_coupons(new_cart, coupons)
-  puts  apply_clearance(hash)
+  hash = apply_clearance(hash)
   value = 0.00
+  count = 0
   hash.each do |item, stuff|
     stuff.each do |thing, amount|
+      if thing == :count
+        count = amount
+      end
       if thing == :price
-        value += amount
+        value += (count * stuff)
       end
     end
   end
