@@ -59,7 +59,7 @@ def checkout(cart, coupons)
       elsif thing == :clearance && amount == false
         i = false
       end
-      if i == true && 
+      if i == true && item == :price
         
       end
     end
