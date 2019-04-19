@@ -51,6 +51,7 @@ def checkout(cart, coupons)
   # code here
   new_cart = consolidate_cart(cart)
   hash = apply_coupons(new_cart, coupons)
+  puts apply_clearance(hash)
   hash = apply_clearance(hash)
 
   value = 0.00
