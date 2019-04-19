@@ -64,5 +64,5 @@ def checkout(cart, coupons)
       end
     end
   end
-  return hash
+  hash.each 
 end
